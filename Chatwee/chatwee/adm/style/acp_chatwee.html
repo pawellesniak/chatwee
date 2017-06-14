@@ -1,0 +1,71 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_CHATWEE_CONFIG}</h1>
+
+<form id="chatwee_mod_form" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_CHATWEE_GENERAL_SETTINGS}</legend> 
+		<dl>
+			<dt><label for="chatwee_enable">{L_CHATWEE_ENABLE}{L_COLON}</label><br /><span>{L_CHATWEE_ENABLE_EXPLAIN}</span></dt>
+			<dd>
+				<input type="checkbox" name="chatwee_enable" value="1" id="chatwee_enable"<!-- IF S_CHATWEE_ENABLE --> checked<!-- ENDIF --> />
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="chatwee_code">{L_CHATWEE_CODE}{L_COLON}</label><br /><span>{L_CHATWEE_CODE_EXPLAIN}</span></dt>
+			<dd>
+				<label><textarea style="min-height: 80px;" name="chatwee_code" id="chatwee_code">{S_CHATWEE_CODE}</textarea> </label>
+			</dd>
+		</dl>
+	</fieldset>
+	
+	<fieldset>
+		<legend>{L_SINGLE_SIGN_ON_SETTINGS}</legend>
+		<dl>
+			<dt><label for="single_sign_on_enable">{L_SINGLE_SIGN_ON_ENABLE}{L_COLON}</label><br /><span>{L_SINGLE_SIGN_ON_ENABLE_EXPLAIN}</span></dt>
+			<dd>
+				<input type="checkbox" name="single_sign_on_enable" value="1" id="single_sign_on_enable"<!-- IF S_SINGLE_SIGN_ON_ENABLE --> checked<!-- ENDIF --> />
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="chatwee_version">{L_CHATWEE_VERSION}{L_COLON}</label><br /><span>{L_CHATWEE_VERSION_EXPLAIN}</span></dt>
+			<dd>
+				<select name="chatwee_version" style="width: 355px;">
+				  <option value="1"<!-- IF S_CHATWEE_VERSION=="2" --> selected<!-- ENDIF -->>Chatwee 1.0</option> 
+				  <option value="2"<!-- IF S_CHATWEE_VERSION=="2" --> selected<!-- ENDIF -->>Chatwee 2.0</option>
+				</select>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="single_sign_on_chat_id">{L_SINGLE_SIGN_ON_CHAT_ID}{L_COLON}</label><br /><span>{L_SINGLE_SIGN_ON_CHAT_ID_EXPLAIN}</span></dt>
+			<dd>
+				<label><input type="text" style="width: 350px;" name="single_sign_on_chat_id" value="{S_SINGLE_SIGN_ON_CHAT_ID}" id="single_sign_on_chat_id"/></label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="single_sign_on_key_api">{L_SINGLE_SIGN_ON_KEY_API}{L_COLON}</label><br /><span>{L_SINGLE_SIGN_ON_KEY_API_EXPLAIN}</span></dt>
+			<dd>
+				<label><input type="text" style="width: 350px;" name="single_sign_on_key_api" value="{S_SINGLE_SIGN_ON_KEY_API}" id="single_sign_on_key_api"/></label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="chatwee_global_moderators_as_admin">{L_GLOBAL_MODERATORS_AS_ADMIN}{L_COLON}</label><br /><span>{L_GLOBAL_MODERATORS_AS_ADMIN_EXPLAIN}</span></dt>
+			<dd>
+				<input type="checkbox" name="chatwee_global_moderators_as_admin" value="1" id="chatwee_global_moderators_as_admin"<!-- IF S_GLOBAL_MODERATORS_AS_ADMIN --> checked<!-- ENDIF --> />
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

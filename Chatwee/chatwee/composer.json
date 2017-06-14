@@ -1,0 +1,27 @@
+{
+	"name": "Chatwee/chatwee",
+	"type": "phpbb-extension",
+	"description": "PHPBB Chat Extension by Chatwee for phpBB 3.2",
+	"homepage": "https://chatwee.com/",
+	"version": "2.0.0",
+	"time": "2017-02-26",
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "Pawel Lesniak",
+			"email": "pawel.lesniak@chatwee.com",
+			"homepage": "https://chatwee.com/",
+			"role": "PHP Developer"
+		}],
+	"require": {
+		"php": ">=5.3.3"
+	}, 
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "PHPBB Chat Extension by Chatwee",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<=3.2.0"
+		}
+	}
+}

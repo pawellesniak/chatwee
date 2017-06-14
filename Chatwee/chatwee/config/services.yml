@@ -1,0 +1,12 @@
+services:
+    Chatwee.chatwee.listener:
+        class: Chatwee\chatwee\event\listener
+        arguments:
+            - @config
+            - @request
+            - @template
+            - @auth
+            - @dbal.conn
+            - @user
+        tags:
+            - { name: event.listener }
